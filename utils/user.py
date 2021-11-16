@@ -1,0 +1,1 @@
+av = lambda x : x.avatar.url if x.avatar else x.default_avatar
