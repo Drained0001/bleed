@@ -14,7 +14,8 @@ class serverinfo(commands.Cog):
         guild_icon = [ctx.guild.icon.url if ctx.guild.icon else ctx.author.display_avatar][0]
         guild_banner = [ctx.guild.banner.url if ctx.guild.banner else None][0]
         guild_splash = [ctx.guild.icon.url if ctx.guild.icon else None][0]
-        author_avatar = [ctx.author.avatar.url if ctx.author.avatar else self.ctx.author.default_avatar.url][0]
+        author_avatar = lambda x:x.avatar.url if x.avatar else x.default_avatar.url
+        author_avatar = author_avatar(ctx.author)
         max_emojis = {
             0: "50",
             1: "100",
