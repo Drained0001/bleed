@@ -9,7 +9,7 @@ class invite(commands.Cog):
 
     @commands.command()
     async def invite(self, ctx):
-        await ctx.send(f"https://discord.com/oauth2/authorize?client_id={self.client.user.id}&permissions=8&scope=bot **now invite me**\nhttps://top.gg/bot/{self.client.user.id}/vote **now vote for me**")
+        await ctx.send(f"https://discord.com/oauth2/authorize?client_id={self.client.user.id}&permissions=8&scope=bot **invite me**")
 
 def setup(client):
     client.add_cog(invite(client))
