@@ -12,7 +12,7 @@ class snipe(commands.Cog):
         self.last_snipe[message.channel.id] = message
 
     @commands.command(aliases=["s"])
-    async def snipe(self, ctx, channel: discord.TextChannel):
+    async def snipe(self, ctx, channel: discord.TextChannel = None):
         channel = channel or ctx.channel
         try:
             msg = self.last_snipe[channel.id]
