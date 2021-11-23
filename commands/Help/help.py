@@ -76,7 +76,7 @@ class help(commands.Cog):
     @commands.command(aliases=["commands"])
     async def help(self, ctx, command=None):
         color = ctx.author.color or int(embeds.data["colors"]["default"], 16)
-        author_avatar = ''.join([ctx.author.avatar.url if ctx.author.avatar else "https://fi.pinterest.com/pin/787074472372724511/"])
+        author_avatar = ctx.author.display_avatar
 
         if command:
             try:
